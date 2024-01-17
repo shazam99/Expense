@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoAddCircleOutline, IoBarChart, IoDocumentText, IoHome, IoMenu } from "react-icons/io5";
 
 const Header = () => {
+    const [flag,setFlag] = useState(false);
     return (
         <Head>
             <Menu>
@@ -19,7 +20,24 @@ const Header = () => {
                     <IoBarChart size='30px' />
                 </MenuItem>
                 <MenuItem>
-                    <IoMenu size='30px' />
+                    <IoMenu size='30px' onClick={()=>setFlag(!flag)} />
+                    {flag&& <Settings>
+                        <br />
+
+                        List 1 <br />
+                        <hr />
+                        List 2 <br />
+                        <hr />
+
+                        List 3 <br />
+                        <hr />
+
+                        List 4 <br />
+                        <hr />
+
+                        List 5 <br />
+                        
+                    </Settings>}
                 </MenuItem>
             </Menu>
         </Head>
@@ -42,6 +60,18 @@ const Menu = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+`;
+const Settings = styled.div`
+    background: #305750;
+    height: 200px;
+    width:200px;
+    position: absolute;
+    bottom: 60px;
+    right:10px;
+    border-radius:10px;
+    text-align:center;
+    align-items:center;
 `;
 
 const MenuItem = styled.div`

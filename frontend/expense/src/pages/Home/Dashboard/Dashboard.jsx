@@ -4,12 +4,11 @@ import Header from '../../../components/header/Header';
 import { MdFastfood, MdReceipt, MdTrain } from "react-icons/md";
 import OneWeekCalendar from '../../../components/calendar/OneWeekCalendar';
 import Charts from '../../../components/charts/Charts';
-
-
+import { IoCalendarNumberOutline, IoMoon, IoSunny, IoSunnyOutline } from 'react-icons/io5';
 
 
 const Dashboard = () => {
-    const [flag,setFlag] = useState(true);
+    const [flag, setFlag] = useState(true);
     return (
         <div>
             <Inside>
@@ -17,10 +16,17 @@ const Dashboard = () => {
                     <TopCard>
                         <p style={{ marginBottom: 0 }}>Today</p>
                         <p style={{ margin: '5px 0 0 0', fontSize: '20px', fontWeight: '700' }}>₹148</p>
+                        <LeftIcon>
+                            <IoSunny size={40}/>
+                            {/* <IoMoon size={50} /> */}
+                        </LeftIcon>
                     </TopCard>
                     <TopCard>
                         <p style={{ marginBottom: 0 }}>Jannuary</p>
                         <p style={{ margin: '5px 0 0 0', fontSize: '20px', fontWeight: '700' }}>₹6098</p>
+                        <LeftIcon>
+                            <IoCalendarNumberOutline size={40} />
+                        </LeftIcon>
                     </TopCard>
                 </TwoCards>
                 <Calendar>
@@ -28,105 +34,105 @@ const Dashboard = () => {
                 </Calendar>
                 <Switches>
                     <p style={{ margin: 0, color: flag ? '#305750' : '#c0c0c0' }} onClick={() => setFlag(true)}  >Expenses</p>
-                    <p style={{ margin: 0, color: !flag ? '#305750' : '#c0c0c0' }}                   onClick={() => setFlag(false)} >Analysis</p>
+                    <p style={{ margin: 0, color: !flag ? '#305750' : '#c0c0c0' }} onClick={() => setFlag(false)} >Analysis</p>
                 </Switches>
                 <List>
                     {flag && (<>
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdFastfood size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            Breakfast
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                Breakfast
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdTrain size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            MetroCard
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdTrain size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                MetroCard
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdFastfood size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            Lunch
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                Lunch
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdFastfood size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            Breakfast
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                Breakfast
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdTrain size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            MetroCard
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdTrain size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                MetroCard
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdFastfood size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            Lunch
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                Lunch
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdReceipt size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            Electricity
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList>
+                        <EachList>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdReceipt size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                Electricity
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList>
 
-                    <EachList style={{margin:'0 0 60px 0'}}>
-                        <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <MdFastfood size='30px' />
-                        </div>
-                        <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            Dinner
-                        </div>
-                        <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
-                            ₹75
-                        </div>
-                    </EachList></>)}
+                        <EachList style={{ margin: '0 0 60px 0' }}>
+                            <div style={{ margin: '10px 10px 10px 15px', color: '#305750', borderRadius: '8px', border: '1px solid #58998C', width: '40px', height: '40px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div style={{ margin: '10px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                Dinner
+                            </div>
+                            <div style={{ margin: '10px 15px', color: '#305750', textAlign: 'center', fontSize: '14px' }}>
+                                ₹75
+                            </div>
+                        </EachList></>)}
 
                     {!flag && (<>
                         <Charts />
@@ -159,7 +165,18 @@ const TopCard = styled.div`
     background: linear-gradient(105deg, #43766C 2.89%, #2F2F2F 99.09%);
     color: #F6F6F6;
     padding: 0 0 0 10px;
+    position:relative;
+    overflow:hidden;
+
 `;
+const LeftIcon = styled.div`
+    position:absolute;
+    right:2px;
+    top:2px;
+    color:#f6f6f6;
+    opacity:0.8
+`;
+
 const Calendar = styled.div`
     max-width: 600px;
     height: auto;
