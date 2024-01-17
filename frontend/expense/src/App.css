@@ -1,0 +1,47 @@
+/* .App {
+  text-align: center;
+} */
+
+
+.one-week-calendar {
+    text-align: center;
+    background-color: #fff;
+    padding: 0 10px 10px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.navigation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 10px; */
+}
+
+.month-year {
+    font-size: 12px;
+}
+
+.today {
+    background-color: #58998C;
+    color: white;
+    border-radius: 20px;
+}
+
+.week-days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day {
+    /* flex: 1; */
+    padding: 10px;
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+.day-date {
+    margin-top: 5px;
+}
