@@ -1,0 +1,19 @@
+1. Login Auth
+2. User daily entry of expense
+3. daily / monthly / yearly charts
+4. pdf reports
+
+
+Daily      -> food,travel,chai
+Monthly    -> Dmart, Metrocard, Mobile, movie, Bills, ecom
+Occasionly -> Travelling, Repair, etc., big purchase
+
+# Tables -> Txns, Daily, Monthly, Yearly, users, category, sub category, token
+
+
+token validation
+
+## DB, Backend, Frontend
+
+
+frontend screens -> Home, add txn, all txns
