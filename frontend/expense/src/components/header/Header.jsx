@@ -1,27 +1,37 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IoAddCircleOutline, IoBarChart, IoDocumentText, IoHome, IoMenu } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [flag,setFlag] = useState(false);
+    const [flag, setFlag] = useState(false);
     return (
         <Head>
             <Menu>
-                <MenuItem>
-                    <IoHome size='30px' />
-                </MenuItem>
-                <MenuItem>
-                    <IoDocumentText size='30px' />
-                </MenuItem>
-                <MenuItem>
-                    <IoAddCircleOutline size='30px' />
-                </MenuItem>
-                <MenuItem>
+                <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/dashboard">
+                    <MenuItem>
+                        <IoHome size='30px' />
+                    </MenuItem>
+                </Link>
+
+                <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/all-expenses">
+                    <MenuItem >
+                        <IoDocumentText size='30px' />
+                    </MenuItem>
+                </Link>
+
+                <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/add-expense">
+                    <MenuItem>
+                        <IoAddCircleOutline size='30px' />
+                    </MenuItem>
+                </Link>
+
+                <MenuItem onClick={() => alert('logs')}>
                     <IoBarChart size='30px' />
                 </MenuItem>
-                <MenuItem>
-                    <IoMenu size='30px' onClick={()=>setFlag(!flag)} />
-                    {flag&& <Settings>
+                <MenuItem onClick={() => setFlag(!flag)}>
+                    <IoMenu size='30px' />
+                    {flag && <Settings>
                         <br />
 
                         List 1 <br />
@@ -36,7 +46,7 @@ const Header = () => {
                         <hr />
 
                         List 5 <br />
-                        
+
                     </Settings>}
                 </MenuItem>
             </Menu>
@@ -49,6 +59,7 @@ const Head = styled.div`
     position: fixed;
     bottom: 0;
     width: 100vw;
+    background: #305750;
 `;
 
 const Menu = styled.div`
@@ -76,6 +87,8 @@ const Settings = styled.div`
 
 const MenuItem = styled.div`
     margin: 10px;
+    height:100%
+    align-items:center;
 `;
 
 export default Header;

@@ -40,8 +40,19 @@
 
 .day-name {
     font-weight: bold;
+    font-size: 10px;
 }
 
 .day-date {
     margin-top: 5px;
+    font-size: 10px;
+}
+
+/* active class */
+p a.active{
+    color: #305750 !important;
+}
+.nav-switch{
+    text-decoration: none;
+    color: #c0c0c0;
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import * as echarts from 'echarts';
 
-const Charts = () => {
+const Charts = ({data}) => {
     useEffect(() => {
         var chartDom = document.getElementById('mainc');
         var myChart = echarts.init(chartDom);
@@ -13,15 +13,10 @@ const Charts = () => {
             },
             series: [
                 {
-                    name: 'Access From',
+                    name: 'Monthly Data',
                     type: 'pie',
-                    radius: '50%',
-                    data: [
-                        { value: 51.72,   name: 'Rent' },
-                        { value: 34.48, name: 'Food' },
-                        { value: 3.44, name: 'Travel' },
-                        { value: 10.34, name: 'Online' },
-                    ],
+                    radius: '60%',
+                    data: data,
                     emphasis: {
                         itemStyle: {
                             shadowBlur: 10,
