@@ -50,13 +50,13 @@ const OneWeekCalendar = () => {
     return (
         <div className="one-week-calendar">
             <div className="navigation-buttons">
-                <div style={{ padding: '20px' }} onClick={handlePreviousWeek}>
+                <div style={{ padding: '10px 20px' }} onClick={handlePreviousWeek}>
                     <MdOutlineArrowBackIos />
                 </div>
                 <div className="month-year">
                     {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
                 </div>
-                <div style={{ padding: '20px' }} onClick={handleNextWeek}>
+                <div style={{ padding: '10px 20px' }} onClick={handleNextWeek}>
                     <MdOutlineArrowForwardIos />
                 </div>
             </div>
