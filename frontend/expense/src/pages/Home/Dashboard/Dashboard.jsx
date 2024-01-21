@@ -273,6 +273,9 @@ const Switches = styled.div`
 const List = styled.div`
     height: 500px;
     overflow-y:scroll;
+     &::-webkit-scrollbar { 
+    display: none;
+}
     @media (max-width: 600px) {
         height: 350px;
     }

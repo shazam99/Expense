@@ -101,10 +101,16 @@ const Container = styled.div`
   overflow: scroll;
   background: #58998C;
   font-family: 'Nunito', sans-serif;
+   &::-webkit-scrollbar { 
+    display: none;
+}
 `;
 const Inside = styled.div`
   color: #f6f6f6;
-  overflow: scroll;
+  overflow-y: hidden;
+    &::-webkit-scrollbar { 
+    display: none;
+}
 `;
 const Top = styled.div`
     height:50px;
