@@ -20,15 +20,15 @@ const Dashboard = () => {
             <Inside>
                 <TwoCards>
                     <TopCard>
-                        <p style={{ marginBottom: 0 }}>Today</p>
-                        <p style={{ margin: '5px 0 0 0', fontSize: '20px', fontWeight: '700' }}>₹148</p>
+                        <p className='head' style={{ marginBottom: 0 }}>Today</p>
+                        <p style={{ margin: '5px 0 0 0', fontSize: '16px', fontWeight: '600' }}>₹148</p>
                         <LeftIcon>
                             {isDayTime ? <IoSunny size={40} /> : <GiNightSleep  size={40} />}
                         </LeftIcon>
                     </TopCard>
                     <TopCard>
-                        <p style={{ marginBottom: 0 }}>Jannuary</p>
-                        <p style={{ margin: '5px 0 0 0', fontSize: '20px', fontWeight: '700' }}>₹6098</p>
+                        <p className='head' style={{ marginBottom: 0 }}>Jannuary</p>
+                        <p style={{ margin: '5px 0 0 0', fontSize: '16px', fontWeight: '600' }}>₹6098</p>
                         <LeftIcon>
                             <IoCalendarNumberOutline size={40} />
                         </LeftIcon>
@@ -53,13 +53,14 @@ const Dashboard = () => {
                     <Routes>
                         <Route path=""         element={<ExpenseLists />} />
                         <Route path="analysis" element={<Charts data={chartData} />} />
-                        {/* <Route path="add-expense" element={<AddExpense />} /> */}
                     </Routes>
                 </List>
             </Inside>
         </div>
     )
 }
+
+
 
 const ExpenseLists = () => {
     return (
@@ -191,13 +192,17 @@ const TopCard = styled.div`
     padding: 0 0 0 10px;
     position:relative;
     overflow:hidden;
+    font-family: 'Ubuntu', sans-serif;
 
+    .head{
+        font-family: 'Poppins', sans-serif !important;
+        font-size:14px;
+    }
 `;
 const LeftIcon = styled.div`
     position:absolute;
     right:10px;
     top:20%;
-    // color:#f6f6f6;
     color:#43766C;
     opacity:0.5
 `;
@@ -211,6 +216,7 @@ const Calendar = styled.div`
     text-align: center;
     color:#c0c0c0;
     color:#808080;
+    font-family: 'Ubuntu', sans-serif;
 `;
 const Switches = styled.div`
     max-width: 600px;
@@ -221,6 +227,7 @@ const Switches = styled.div`
     font-weight:800;
     padding: 10px 0;
     color: #c0c0c0;
+    font-family: 'Poppins', sans-serif;
 
 `;
 const List = styled.div`
@@ -237,6 +244,8 @@ const EachList = styled.div`
     justify-content: space-between;
     align-items:center;
     margin: 10px 0;
+    font-family: 'Nunito', sans-serif;
+
 `;
 
 export default Dashboard
