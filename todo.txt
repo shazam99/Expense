@@ -5,7 +5,7 @@
 
 
 Daily      -> food,travel,chai
-Monthly    -> Dmart, Metrocard, Mobile, movie, Bills, ecom
+Monthly    -> Dmart, Metrocard, Mobile, movie, Bills, ecom, medical
 Occasionly -> Travelling, Repair, etc., big purchase
 
 # Tables -> Txns, Daily, Monthly, Yearly, users, category, sub category, token
@@ -17,3 +17,18 @@ token validation
 
 
 frontend screens -> Home, add txn, all txns
+## Add Expense
+1. category (dropdown)
+2. sub category (show dropdown, if not in dropdown then save it in options)
+3. time (time now, which can be changed)
+4. amount (input)
+5. desc (input)
+* sub category can be deleted in menu
+
+
+
+
+txn details -> 
+category, sub category, amount, time, desc, 
+
+

@@ -1,54 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { IoAddCircleOutline, IoBarChart, IoDocumentText, IoHome, IoMenu } from "react-icons/io5";
+import { IoAddCircleOutline, IoBarChart, IoHome} from "react-icons/io5";
+import { TbListDetails } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [flag, setFlag] = useState(false);
     return (
         <Head>
             <Menu>
                 <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/dashboard">
                     <MenuItem>
-                        <IoHome size='30px' />
+                        <IoHome size='25px' />
                     </MenuItem>
                 </Link>
 
                 <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/all-expenses">
                     <MenuItem >
-                        <IoDocumentText size='30px' />
+                        {/* <IoDocumentText size='25px' /> */}
+                        <TbListDetails size='25px' />
+                        {/* TbListDetails  */}
                     </MenuItem>
                 </Link>
 
                 <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/add-expense">
                     <MenuItem>
-                        <IoAddCircleOutline size='30px' />
+                        <IoAddCircleOutline size='25px' />
                     </MenuItem>
                 </Link>
-
-                <MenuItem onClick={() => alert('logs')}>
-                    <IoBarChart size='30px' />
+                <MenuItem>
+                    <IoBarChart size='25px' />
                 </MenuItem>
-                <MenuItem onClick={() => setFlag(!flag)}>
-                    <IoMenu size='30px' />
-                    {flag && <Settings>
-                        <br />
-
-                        List 1 <br />
-                        <hr />
-                        List 2 <br />
-                        <hr />
-
-                        List 3 <br />
-                        <hr />
-
-                        List 4 <br />
-                        <hr />
-
-                        List 5 <br />
-
-                    </Settings>}
-                </MenuItem>
+                <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/menu">
+                    <MenuItem>
+                        <CircularImage src="user.jpg" alt="Alt Text" width="25px" />
+                    </MenuItem>
+                </Link>
             </Menu>
         </Head>
     );
@@ -61,7 +47,14 @@ const Head = styled.div`
     width: 100vw;
     background: #305750;
 `;
-
+const CircularImage = styled.img`
+  border-radius: 50%;
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  border: 2px solid #f6f6f6;
+  background:#f6f6f6;
+`;
 const Menu = styled.div`
     background: #305750;
     height: 50px;
@@ -71,20 +64,7 @@ const Menu = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 `;
-const Settings = styled.div`
-    background: #305750;
-    height: 200px;
-    width:200px;
-    position: absolute;
-    bottom: 60px;
-    right:10px;
-    border-radius:10px;
-    text-align:center;
-    align-items:center;
-`;
-
 const MenuItem = styled.div`
     margin: 10px;
     height:100%
