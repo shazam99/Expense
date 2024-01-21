@@ -1,6 +1,16 @@
 import React from 'react'
 import { MdFastfood } from 'react-icons/md';
-import styled from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+
+
+
+const GlobalStyle = createGlobalStyle`
+body {
+margin: 0;
+padding: 0;
+overflow:auto;
+}
+`;
 
 const AllExpenses = () => {
     return (
@@ -9,159 +19,157 @@ const AllExpenses = () => {
                     All Transactions
                 </Head>
                 <Transactions>
-                    <Txn>
-                        <DateHead>
-                            19 Jannuary, 2024
-                        </DateHead>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                <Txn>
+                    <DateHead>
+                        19 Jannuary, 2024
+                    </DateHead>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                    </Txn>
-                    <Txn>
-                        <DateHead>
-                            18 Jannuary, 2024
-                        </DateHead>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                </Txn>
+                <Txn>
+                    <DateHead>
+                        18 Jannuary, 2024
+                    </DateHead>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                    </Txn>
-                    <Txn>
-                        <DateHead>
-                            17 Jannuary, 2024
-                        </DateHead>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                        <DateTxns>
-                            <div className="icon-container">
-                                <div className="icon">
-                                    <MdFastfood size='30px' />
-                                </div>
-                                <div>
-                                    <div className="text">Breakfast</div>
-                                    <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
-                                </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
                             </div>
-                            <div className="amount">₹75</div>
-                        </DateTxns>
-                    </Txn>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                            </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                </Txn>
+                <Txn>
+                    <DateHead>
+                        17 Jannuary, 2024
+                    </DateHead>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                            </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div>
+                            </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div>
+                            </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                    <DateTxns>
+                        <div className="icon-container">
+                            <div className="icon">
+                                <MdFastfood size='30px' />
+                            </div>
+                            <div>
+                                <div className="text">Breakfast</div>
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div>
+                            </div>
+                        </div>
+                        <div className="amount">₹75</div>
+                    </DateTxns>
+                </Txn>
                 </Transactions>
             </Inside>
     )
 }
 const Inside = styled.div`
     max-width: 600px;
-    height: 100%;
-    // height: calc(100vh - 50px);
-
     margin: 0 auto;
     padding:  0 10px;
     background: #fff;
+    // min-height: 100vh ;
 `;
+
 const Head = styled.div`
   font-size: 20px;
   font-weight: 800;
   padding: 30px 20px;
-//   margin-top:10px;
   color: #305750;
   position: sticky;
   background:#fff;
@@ -172,7 +180,8 @@ const Head = styled.div`
 `;
 const Transactions = styled.div`
   margin:10px;
-  margin-bottom:100px;
+  padding-bottom:50px;
+  overflow:scroll;
 `;
 const Txn = styled.div`
 margin: 0 10px 20px;
@@ -193,12 +202,10 @@ const DateTxns = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 0 10px 0;
-    font-family: 'Nunito', sans-serif;
-
+  font-family: 'Nunito', sans-serif;
 
   .icon-container {
     display: flex;
-    // flex-direction: column;
     align-items: center;
   }
 
@@ -222,7 +229,7 @@ const DateTxns = styled.div`
     font-size: 14px;
     @media (max-width: 600px) {
         height: auto;
-        overflow: auto;
+        // overflow: auto;
         font-size: 12px;
     }
     }
@@ -236,4 +243,20 @@ const DateTxns = styled.div`
   }
 `;
 
-export default AllExpenses;
+// export default AllExpenses;
+
+
+const theme = {};
+
+const App = () => {
+    return (
+        <ThemeProvider theme={theme}>
+            <>
+                <GlobalStyle />
+                <AllExpenses />
+            </>
+        </ThemeProvider>
+    );
+};
+
+export default App;

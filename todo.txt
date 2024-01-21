@@ -29,4 +29,6 @@ frontend screens -> Home, add txn, all txns
 
 
 txn details -> 
-category, sub category, amount, time, desc, icon
+category, sub category, amount, time, desc, 
+
+

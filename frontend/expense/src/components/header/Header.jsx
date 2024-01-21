@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { IoAddCircleOutline, IoBarChart, IoDocumentText, IoHome, IoMenu } from "react-icons/io5";
+import { IoAddCircleOutline, IoBarChart, IoHome} from "react-icons/io5";
+import { TbListDetails } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [flag, setFlag] = useState(false);
     return (
         <Head>
             <Menu>
@@ -16,7 +16,9 @@ const Header = () => {
 
                 <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/all-expenses">
                     <MenuItem >
-                        <IoDocumentText size='25px' />
+                        {/* <IoDocumentText size='25px' /> */}
+                        <TbListDetails size='25px' />
+                        {/* TbListDetails  */}
                     </MenuItem>
                 </Link>
 
@@ -25,29 +27,14 @@ const Header = () => {
                         <IoAddCircleOutline size='25px' />
                     </MenuItem>
                 </Link>
-                    <MenuItem>
-                        <IoBarChart size='25px' />
-                    </MenuItem>
-
-                <MenuItem onClick={() => setFlag(!flag)}>
-                    <CircularImage src="user.jpg" alt="Alt Text" width="25px" />
-                    {flag && <Settings>
-                        <br />
-
-                        Profile <br />
-                        <hr />
-
-                        Theme <br />
-                        <hr />
-
-                        
-                        sub category <br />
-                        <hr />
-
-                        <Link to='/login'>Logout</Link> <br />
-
-                    </Settings>}
+                <MenuItem>
+                    <IoBarChart size='25px' />
                 </MenuItem>
+                <Link style={{ textDecoration: 'none', color: '#f6f6f6' }} to="/menu">
+                    <MenuItem>
+                        <CircularImage src="user.jpg" alt="Alt Text" width="25px" />
+                    </MenuItem>
+                </Link>
             </Menu>
         </Head>
     );
@@ -77,21 +64,7 @@ const Menu = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 `;
-const Settings = styled.div`
-    background: #305750;
-    height: 170px;
-    width: 170px;
-    position: absolute;
-    bottom: 60px;
-    right:10px;
-    border-radius:10px;
-    text-align:center;
-    align-items:center;
-    z-index:5;
-`;
-
 const MenuItem = styled.div`
     margin: 10px;
     height:100%

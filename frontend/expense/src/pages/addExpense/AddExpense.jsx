@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Select from 'react-select';
+import { useLocation } from 'react-router-dom';
 
 const categoryOptions = [
     { value: 'food', label: 'Food' },
@@ -14,12 +15,27 @@ const subCategoryOptions = [
     // Add more sub-category options as needed
 ];
 
+
+const GlobalStyle = createGlobalStyle`
+body {
+margin: 0;
+padding: 0;
+overflow:hidden;
+}
+`;
+
 const AddExpense = () => {
     const [dateAndTime, setDateAndTime] = useState(new Date().toISOString().slice(0, 16));
 
     const handleDateAndTimeChange = (e) => {
         setDateAndTime(e.target.value);
     };
+
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     return (
         <>
@@ -65,9 +81,9 @@ const Inside = styled.div`
   max-width: 600px;
   height: calc(100vh - 50px);
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 10px 100px 10px;
   background: #fff;
-  overflow-y:hidden;
+  overflow-y:scroll;
 `;
 
 
@@ -83,7 +99,6 @@ const Switches = styled.div`
   padding: 10px 0;
   color: #305750;
     font-family: 'Poppins', sans-serif;
-
 `;
 
 const FormFields = styled.div`
@@ -112,7 +127,7 @@ const Input = styled.input`
 `;
 
 const SubmitButton = styled.button`
-  margin: 0 10px;
+  margin: 0 10px 50px;
   color:white;
   background:#58998C;
   padding: 8px 30px;
@@ -124,4 +139,20 @@ const SubmitButton = styled.button`
   border-bottom: 1px solid #305750; /* Add bottom border */
 `;
 
-export default AddExpense;
+// export default AddExpense;
+
+
+const theme = {};
+
+const App = () => {
+    return (
+        <ThemeProvider theme={theme}>
+            <>
+                <GlobalStyle />
+                <AddExpense />
+            </>
+        </ThemeProvider>
+    );
+};
+
+export default App;
