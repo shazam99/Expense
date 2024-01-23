@@ -84,6 +84,9 @@ const Inside = styled.div`
   padding: 10px 10px 100px 10px;
   background: #fff;
   overflow-y:scroll;
+   &::-webkit-scrollbar { 
+    display: none;
+}
 `;
 
 

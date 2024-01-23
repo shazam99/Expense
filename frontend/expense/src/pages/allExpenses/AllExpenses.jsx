@@ -30,7 +30,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> 
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -42,7 +42,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> 
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -59,7 +59,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> 
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -71,7 +71,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> 
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -83,7 +83,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div>
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -95,7 +95,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div>
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -112,7 +112,7 @@ const AllExpenses = () => {
                             </div>
                             <div>
                                 <div className="text">Breakfast</div>
-                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> {/* Replace with the actual time */}
+                                <div className="text" style={{ color: "#58998C" }}>8:00 AM</div> 
                             </div>
                         </div>
                         <div className="amount">₹75</div>
@@ -163,7 +163,6 @@ const Inside = styled.div`
     margin: 0 auto;
     padding:  0 10px;
     background: #fff;
-    // min-height: 100vh ;
 `;
 
 const Head = styled.div`
@@ -182,6 +181,9 @@ const Transactions = styled.div`
   margin:10px;
   padding-bottom:50px;
   overflow:scroll;
+   &::-webkit-scrollbar { 
+    display: none;
+}
 `;
 const Txn = styled.div`
 margin: 0 10px 20px;
