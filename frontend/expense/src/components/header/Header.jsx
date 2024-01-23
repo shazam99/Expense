@@ -46,6 +46,7 @@ const Head = styled.div`
     bottom: 0;
     width: 100vw;
     background: #305750;
+    z-index:5;
 `;
 const CircularImage = styled.img`
   border-radius: 50%;

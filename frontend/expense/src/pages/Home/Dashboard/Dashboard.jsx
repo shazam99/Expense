@@ -272,7 +272,7 @@ const Switches = styled.div`
 `;
 const List = styled.div`
     height: 500px;
-    overflow-y:scroll;
+    overflow-y:auto;
     @media (max-width: 600px) {
         height: 350px;
     }
