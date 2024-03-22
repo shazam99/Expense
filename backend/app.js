@@ -1,24 +1,36 @@
 const express = require('express');
-const authenticateToken = require('./AuthMiddleware');
-const AuthService = require('./AuthService');
+const dotenv = require("dotenv").config();
+const errorHandler = require("./middleware/errorHandler");
+const sequelize = require('./config/dbConfig');
+const userRoute = require("./routes/userRoute")
+const categoryRoute = require("./routes/categoryRoute")
+const subRoute = require("./routes/subCategoryRoute")
+const apiRoute = require("./routes/apiRoute")
+// DB connectivity check 
+sequelize.authenticate()
+.then(() => {
+    console.log('Connected to Database');
+})
+.catch((err) => {
+    console.log("Error connecting Databse: ",err)
+});
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
+// Body Parser middleware
 app.use(express.json());
 
-app.post('/login', (req, res) => {
-    const body = req.body;
-    const user = body;
-    const token = AuthService.generateToken(user);
-    res.json({ token });
-});
+//routes
+app.use("/api/doc",apiRoute)
+app.use("/api/v1/users", userRoute)
+app.use("/api/v1/update/category", categoryRoute)
+app.use("/api/v1/update/sub-category", subRoute)
 
-app.use('/secure-data', authenticateToken);
 
-app.get('/secure-data', (req, res) => {
-    res.json({ message: 'This data is secure!', user: req.user });
-});
+
+// Error Handler middleware
+app.use(errorHandler);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
